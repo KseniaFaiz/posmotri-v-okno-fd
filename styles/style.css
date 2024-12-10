@@ -167,9 +167,6 @@ border: 2px solid transparent;
   text-decoration: underline; /* Подчеркивание текста */
 }
 
-.search-form__label:has(.search-form__textfield:focus-visible) {
-  border-color: white; /* Белая граница при focus-visible */
-}
 
 .search-form__textfield {
   background-color: transparent;
@@ -190,7 +187,6 @@ color:white;
 appearance: none;
 }
 
-.
 
 .title {
   font-family: Oswald;
@@ -203,6 +199,7 @@ appearance: none;
   text-transform: uppercase;
 margin-bottom: 26px;
 }
+
 .title .content__accent {
   font-family: Oswald;
 font-size: 75px;
