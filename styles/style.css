@@ -64,8 +64,29 @@ overflow-y: auto;
 .content__card-link {
 text-decoration-line: none;
 display: block;
+padding:1px;
 }
 
+.content__card-link:focus {
+  outline: none;
+}
+
+
+.content__card-link:hover .content__video-card-description-container {
+  text-decoration-style: solid;                                                      
+  text-decoration-skip-ink: false;
+  text-decoration-color: #fff;
+  text-decoration-line: underline;
+}
+
+.content__card-link:active {
+  background-color: #545050;
+  color:#fff
+}
+
+.button:focus-within {
+  outline: 1px solid #ffffff;
+} 
 .content__card-link:focus-visible {
 display: block;
 padding: 1px;
@@ -130,9 +151,9 @@ color: #fff;
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
   content: '';
   position: absolute;
-  left: 1px; /* Положение квадрата */
+  left: 1px;
   top: 1px;
-  right: 1px; /* Положение квадрата */
+  right: 1px;
   bottom: 1px;
   background-color: #fff;
 }
@@ -156,10 +177,10 @@ border: 2px solid transparent;
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
- 
-  
+  border: none;
 }
-.search-form__label:has(.search-form__textfield:focus-visible) {
+
+.search-form__label:has(.search-form__pseudo-checkbox):focus-visible {
   border-color: white; /* Белая граница при focus-visible */
 }
 
@@ -186,6 +207,7 @@ border-top: 1px solid white;
 color:white;
 appearance: none;
 }
+
 
 
 .title {
@@ -255,6 +277,7 @@ object-fit: cover;
   gap: 6px;
 }
 
+
 .content__video-card-title {
   font-family: Oswald;
 font-size: 30px;
@@ -289,9 +312,9 @@ color: #fff;
 }
 
 .button {
-  background-color: transparent; /* Прозрачный фон */
-  border: 1px solid white; /* Белая рамка */
-  color: white; /* Цвет текста */
+  background-color: transparent; 
+  border: 1px solid white; 
+  color: white; 
   padding-top: 6px;
   padding-bottom:6px;
   height: 34px;
@@ -303,8 +326,27 @@ line-height: 21.6px;
 text-align: center;
 text-underline-position: from-font;
 text-decoration-skip-ink: none;
-cursor: pointer;
+
 }
+
+.button:focus {
+  outline: none;
+}
+
+.button:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.button:active {
+  background-color: #545050;
+  color:#fff;
+  margin: 3px;
+}
+
+.button:focus-within {
+  outline: 1px solid #ffffff;
+} 
 
 .search-form__submit-button {
 width: 194px;
