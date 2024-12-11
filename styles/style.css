@@ -95,6 +95,7 @@ outline-offset: 1px;
 }
 
 .content__list {
+  position: relative;
   height: 298px;
   overflow: auto;
 }
