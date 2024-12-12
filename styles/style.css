@@ -49,8 +49,10 @@ ol {
 .content {
   display: flex;
   gap: 30px;
+  width: 1140px;
   align-items: end;
-  justify-content: center;
+  justify-content: space-between;
+  /* padding-inline: 5px; */
 }
 
 .content__details {
@@ -101,10 +103,11 @@ ol {
 .search-form {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
 }
 
 .search-form__fieldset {
+  display: flex;
+  flex-direction: column;
   border: 0;
 }
 
@@ -267,8 +270,7 @@ ol {
 }
 
 .content__video-card-description-container {
-  object-fit: cover;
-  gap: 6px;
+  width: 200px;
 }
 
 .content__video-card-title {
@@ -285,7 +287,7 @@ ol {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  max-width: 107px;
+  max-width: 199px;
 }
 
 .content__video-card-description {
@@ -347,6 +349,7 @@ ol {
 
 .search-form__submit-button {
   width: 194px;
+  margin-top: auto;
 }
 .more-button {
   width: 100%;
