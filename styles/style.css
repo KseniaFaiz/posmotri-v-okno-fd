@@ -206,9 +206,9 @@ ol {
   border-right: 1px solid #fff;
 }
 
-/* .search-form__label:hover .search-form__label-text {
+.search-form__label:hover .search-form__label-text {
   text-decoration: underline; /* Подчеркивание текста */
-
+}
 
 .search-form__textfield {
   display: block;
