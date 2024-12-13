@@ -83,6 +83,11 @@ ol {
   text-decoration-line: underline;
 }
 
+.content__card-link:hover .content__video-card-title {
+  text-decoration: none;
+  text-decoration-line: underline;
+}
+
 .content__card-link:active {
   background-color: #545050;
   color: #fff;
@@ -173,6 +178,7 @@ ol {
   -webkit-box-align: center;
   gap: 5px;
   width: fit-content;
+  padding: 1px;
 }
 
 .search-form__label-text {
@@ -186,15 +192,26 @@ ol {
   border: none;
 }
 
-.search-form__label:has(.search-form__label-text):focus-visible {
-  border-color: white; /* Белая граница при focus-visible */
+.search-form__label:has(.search-form__textfield:focus-visible) {
+  outline: #ffffff solid 1px;
+}
+/*  белая рамка вокруг выделения tab */
+
+.search-form__label:has(.search-form__textfield:active) {
+  outline: none;
 }
 
-.search-form__label:hover .search-form__label-text {
-  text-decoration: underline; /* Подчеркивание текста */
+.search-form__textfield:active {
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
 }
+
+/* .search-form__label:hover .search-form__label-text {
+  text-decoration: underline; /* Подчеркивание текста */
+
 
 .search-form__textfield {
+  display: block;
   background-color: transparent;
   font-family: Fira Sans Condensed, sans-serif;
   font-size: 18px;
@@ -207,11 +224,14 @@ ol {
   padding: 2px;
   border-top: 1px solid white;
   border-bottom: 1px solid white;
-  border-left: none;
-  border-right: none;
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
   color: white;
   appearance: none;
+  outline: unset;
 }
+
+
 
 .title {
   font-family: Oswald, sans-serif;
@@ -279,8 +299,6 @@ ol {
   font-weight: 700;
   line-height: 30px;
   text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
   color: #fff;
   margin-bottom: 6px;
   text-transform: uppercase;
@@ -288,6 +306,7 @@ ol {
   white-space: nowrap;
   overflow: hidden;
   max-width: 199px;
+  text-decoration-skip-ink: none;
 }
 
 .content__video-card-description {
@@ -296,8 +315,8 @@ ol {
   font-weight: 400;
   line-height: 16.2px;
   text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
+  /* text-underline-position: from-font;*/
+  text-decoration-skip-ink: none; 
   color: #fff;
 }
 
